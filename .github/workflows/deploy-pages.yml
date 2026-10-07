@@ -1,0 +1,43 @@
+name: Terbitkan portofolio ke GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  terbitkan:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Ambil isi repositori
+        uses: actions/checkout@v4
+
+      - name: Susun isi situs
+        run: |
+          mkdir _site
+          cp index.html .nojekyll _site/
+          cp -r docs data sql notebook grafik _site/
+
+      - name: Siapkan GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Unggah isi situs
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Terbitkan
+        id: deployment
+        uses: actions/deploy-pages@v4

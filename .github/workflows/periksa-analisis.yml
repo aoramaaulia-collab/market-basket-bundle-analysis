@@ -1,0 +1,33 @@
+name: Periksa analisis
+
+# Menjalankan ulang notebook dari awal. Notebook berisi pemeriksaan (assert) untuk setiap
+# angka acuan, jadi alur ini gagal kalau ada satu angka pun yang berubah.
+on:
+  push:
+    branches: [main]
+    paths: ["notebook/**", "data/**", "sql/**", "requirements.txt"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  periksa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil isi repositori
+        uses: actions/checkout@v4
+
+      - name: Siapkan Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Pasang pustaka
+        run: pip install -r requirements.txt
+
+      - name: Jalankan notebook dari awal sampai akhir
+        working-directory: notebook
+        run: jupyter nbconvert --to notebook --execute SQL-02_Market_Basket_DuckDB.ipynb --output /tmp/hasil.ipynb --ExecutePreprocessor.timeout=900
+
+      - name: Jalankan berkas SQL di DuckDB
+        working-directory: data
+        run: python -c "import duckdb, re; s = open('../sql/basket_analysis_Aulia_Aorama.sql').read(); s = re.sub(r'/\*.*?\*/', '', s, flags=re.S); c = duckdb.connect(); [c.execute(x) for x in re.split(r';\s*(?:--[^\n]*)?\n|;\s*$', s) if re.sub(r'--[^\n]*', '', x).strip()]; print('SQL OK')"

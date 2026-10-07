@@ -1,0 +1,12 @@
+# Python dan Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# Sistem operasi
+.DS_Store
+Thumbs.db
+# Basis data DuckDB lokal, bila dibuat
+*.duckdb
+*.duckdb.wal

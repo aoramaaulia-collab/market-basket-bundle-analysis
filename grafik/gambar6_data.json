@@ -1,0 +1,30 @@
+[
+ {
+  "nama": "Pasangan yang ditolak",
+  "ditolak": true,
+  "lift": 13.457048052107657,
+  "keranjang": 146,
+  "batas": 92.40506329113924
+ },
+ {
+  "nama": "Bundel 1",
+  "ditolak": false,
+  "lift": 1.6778858910378267,
+  "keranjang": 1231,
+  "batas": 85.96368715083798
+ },
+ {
+  "nama": "Bundel 2",
+  "ditolak": false,
+  "lift": 1.4754127392426584,
+  "keranjang": 1333,
+  "batas": 84.68869123252858
+ },
+ {
+  "nama": "Bundel 3",
+  "ditolak": false,
+  "lift": 1.4056279529522722,
+  "keranjang": 1395,
+  "batas": 87.57062146892656
+ }
+]
