@@ -259,18 +259,18 @@ Penyaring tanggal dipasang di **tahap paling awal**, sebelum keranjang dibentuk,
 
 | Cara menghitung | Ambang | Bundel yang lolos | Keranjang pasangan yang ditolak |
 |---|---:|---|---:|
-| Data penuh (dasar) | 200 | tiga bundel yang sama | 146 |
+| Data penuh | 200 | tiga bundel yang sama | 146 |
 | Enam bulan terakhir | 81 | tiga bundel yang sama | 56 |
-| K1 2025 | 37 | tiga bundel yang sama | 27 |
-| K2 2025 | 41 | tiga bundel yang sama | 33 |
-| K3 2025 | 41 | tiga bundel yang sama | 30 |
-| K4 2025 | 42 | tiga bundel yang sama | 21 |
-| K1 2026 | 40 | tiga bundel yang sama | 35 |
-| ProductID dipulihkan dari nama produk | 200 | tiga bundel yang sama | 152 |
-| Retur dibiarkan | 200 | tiga bundel yang sama | 147 |
-| Sampel gratis dibiarkan | 200 | tiga bundel yang sama | 151 |
-| Retur dan sampel dibiarkan | 200 | tiga bundel yang sama | 152 |
-| Keranjang neto (retur penuh keluar) | 200 | tiga bundel yang sama | 146 |
+| Kuartal 1 2025 | 37 | tiga bundel yang sama | 27 |
+| Kuartal 2 2025 | 41 | tiga bundel yang sama | 33 |
+| Kuartal 3 2025 | 41 | tiga bundel yang sama | 30 |
+| Kuartal 4 2025 | 42 | tiga bundel yang sama | 21 |
+| Kuartal 1 2026 | 40 | tiga bundel yang sama | 35 |
+| ID produk kosong dipulihkan | 200 | tiga bundel yang sama | 152 |
+| Retur ikut dihitung | 200 | tiga bundel yang sama | 147 |
+| Sampel gratis ikut dihitung | 200 | tiga bundel yang sama | 151 |
+| Retur dan sampel ikut dihitung | 200 | tiga bundel yang sama | 152 |
+| Produk yang diretur penuh dikeluarkan | 200 | tiga bundel yang sama | 146 |
 
 **Di kedua belas cara itu, tiga bundel yang sama lolos dan pasangan yang ditolak tetap di bawah ambang.** Tiap kuartal berisi 551 sampai 625 keranjang dengan ambang 37 sampai 42 keranjang (200 dikali porsi keranjang kuartal itu), sedangkan pasangan yang ditolak hanya 21 sampai 35 keranjang. Lift tiap bundel antar-kuartal bergerak paling lebar 0,18.
 
