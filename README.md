@@ -19,7 +19,7 @@
 
 Sebuah e-commerce kecantikan menyiapkan kampanye bundel musiman senilai **Rp 80 juta**, dan tiap bundel memakan porsi anggaran yang sama besar entah laku atau tidak. Analisis **3.000 keranjang belanja** menemukan **tiga pasangan produk yang muncul bersama jauh lebih sering daripada yang bisa dijelaskan oleh larisnya produk itu sendiri**, masing-masing ditopang lebih dari 1.200 keranjang.
 
-Temuan yang lebih menentukan: **pasangan dengan angka paling mencolok justru tidak layak dikampanyekan**, karena hanya menyentuh 146 keranjang. Hasil ini tidak berubah di dua belas cara menghitung ulang.
+Temuan yang lebih menentukan: **pasangan dengan angka paling mencolok justru tidak layak dikampanyekan**, karena hanya menyentuh 146 keranjang.
 
 ![Satu data, tiga cara mengurutkan](grafik/gambar6_tiga_urutan_portofolio.png)
 
@@ -39,7 +39,7 @@ Kode R, K, dan B adalah nomor rekomendasi, keputusan analisis, dan batas. Nomorn
 
 | No | Rekomendasi | Alasan |
 |---|---|---|
-| R1 | **Pasang tiga bundel: bundel 1, bundel 2, dan bundel 3.** | Hanya ketiganya yang lolos ketiga syarat dari 105 pasangan, dengan jangkauan 1.231 sampai 1.395 dari 3.000 keranjang, dan hasilnya sama di dua belas cara menghitung ulang. |
+| R1 | **Pasang tiga bundel: bundel 1, bundel 2, dan bundel 3.** | Hanya ketiganya yang lolos ketiga syarat dari 105 pasangan, dengan jangkauan 1.231 sampai 1.395 dari 3.000 keranjang. |
 | R2 | **Jalankan ketiganya sebagai uji dengan kelompok pembanding, bukan langsung penuh: sebagian pembeli melihat bundel, sebagian tidak.** | Data hanya menunjukkan apa yang sudah dibeli bersama; tanpa pembanding, kenaikan penjualan tidak bisa dibedakan dari pembelian yang memang sudah terjadi. |
 | R3 | **Jangan kampanyekan pasangan yang ditolak; pasang di rekomendasi otomatis halaman produk.** | Hubungannya nyata dan sama kuat terhadap batas maksimumnya, tetapi hanya menyentuh 146 dari 3.000 keranjang dengan biaya kampanye yang sama. |
 | R4 | **Kalau anggaran hanya cukup untuk dua uji: jalankan bundel 2 dan bundel 3, tunda bundel 1.** | Ruang tumbuh bundel 1 paling kecil (507 keranjang), dan bundel 2 satu-satunya hubungan nyata lintas kategori. |
@@ -65,7 +65,6 @@ Kode R, K, dan B adalah nomor rekomendasi, keputusan analisis, dan batas. Nomorn
 2. **Keranjang dibentuk sebagai himpunan produk unik per order.** Di self-join, baris ganda mengalikan hitungan pasangan; di data ini duplikat saja menciptakan **4.686 pasangan palsu**.
 3. **Tiga ukuran dihitung berdampingan** (support, confidence dua arah, lift), selalu dengan jumlah keranjang di sebelahnya, dan kekuatan hubungan dibaca terhadap batas maksimumnya.
 4. **Saringan tiga syarat sekaligus:** lebih sering dari kebetulan, minimal 200 keranjang, dan lolos uji kebetulan (z di atas 1,96).
-5. **Diuji dengan dua belas cara menghitung ulang:** data penuh, enam bulan terakhir, lima kuartal terpisah, dan lima cara membersihkan data yang berbeda. Tiga bundel yang sama lolos di semuanya.
 
 ## Angka acuan
 
